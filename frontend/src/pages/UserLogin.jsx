@@ -25,7 +25,7 @@ const UserLogin = () => {
 
     try {
       // backend auth routes are mounted at /auth (see backend/app.js)
-      const res = await axios.post("http://localhost:5000/auth/login", formData);
+      const res = await axios.post("https://jobjiffy-1.onrender.com/auth/login", formData);
       console.log("Login response:", res.data.user);
         const token = res.data?.token;
         if (token) {

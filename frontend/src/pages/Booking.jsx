@@ -55,7 +55,7 @@ const BookService = () => {
 
       console.log("Sending booking request:", bookingData);
 
-      const res = await axios.post("http://localhost:5000/bookings/book", bookingData);
+      const res = await axios.post("https://jobjiffy-1.onrender.com/bookings/book", bookingData);
       console.log("✅ Booking success:", res.data);
       toast.success("Booking request sent!");
     } catch (err) {

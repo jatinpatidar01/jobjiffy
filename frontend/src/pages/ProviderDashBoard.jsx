@@ -7,7 +7,7 @@ import axios from "axios";
 
 
 const ProviderDashboard = () => {
-    const socket = io("http://localhost:5000", {
+    const socket = io("https://jobjiffy-1.onrender.com/", {
         transports: ["websocket", "polling"],
     });
 
@@ -34,7 +34,7 @@ const ProviderDashboard = () => {
   const handleAccept = () => {
     toast.success("✅ Booking accepted!");
     setBooking(null);
-    axios.post("http://localhost:5000/bookings/accept", {
+    axios.post("https://jobjiffy-1.onrender.com/bookings/accept", {
       bookingId: booking._id,
     }).then((res) => {
       console.log("Booking accepted response:", res.data);
@@ -44,9 +44,15 @@ const ProviderDashboard = () => {
   };
 
   const handleReject = () => {
-    toast.error("❌ Booking rejected!");
+    toast.success("Booking rejected!");
     setBooking(null);
-    // Optionally: send response to backend
+    axios.post("https://jobjiffy-1.onrender.com/bookings/reject", {
+      bookingId: booking._id,
+    }).then((res) => {
+      console.log("Booking rejected response:", res.data);
+    }).catch((err) => {
+      console.error("Error rejecting booking:", err);
+    });
   };
 
   return (

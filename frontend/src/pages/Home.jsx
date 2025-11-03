@@ -25,14 +25,14 @@ export default function Home() {
     const userId = localStorage.getItem("userId");
     if (userId) {
       axios
-        .get(`http://localhost:5000/users/${userId}`)
+        .get(`https://jobjiffy-1.onrender.com/users/${userId}`)
         .then((res) => setUserData(res.data.user))
         .catch(() => setUserData(null));
     }
 
     // Fetch bookings
     if(showAccepted){
-      axios.get("http://localhost:5000/bookings/accepted-bookings",
+      axios.get("https://jobjiffy-1.onrender.com/bookings/accepted-bookings",
         
       )
       .then((res) => {
@@ -42,7 +42,7 @@ export default function Home() {
       .catch(() => setBookings([]));
     }else{
     axios
-      .get("http://localhost:5000/bookings/pending-bookings",
+      .get("https://jobjiffy-1.onrender.com/bookings/pending-bookings",
         {
           params: { userId: localStorage.getItem("userId") },
         }

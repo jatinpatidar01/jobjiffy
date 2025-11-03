@@ -62,7 +62,7 @@ const UserRegister = () => {
       }
 
       // backend auth route for registration is /auth/register
-      const endpoint = "http://localhost:5000/auth/register";
+      const endpoint = "https://jobjiffy-1.onrender.com/auth/register";
 
       const res = await axios.post(endpoint, payload);
 

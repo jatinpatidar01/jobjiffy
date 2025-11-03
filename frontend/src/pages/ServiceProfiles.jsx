@@ -32,7 +32,7 @@ const ServiceProfiles = () => {
         console.log(`${encodeURIComponent(category)}`);
         // ✅ FIXED: removed quotes from query parameter (they broke the backend)
         const response = await axios.get(
-          `http://localhost:5000/users/providers?category=${encodeURIComponent(
+          `https://jobjiffy-1.onrender.com/users/providers?category=${encodeURIComponent(
             category
           )}`,
           {
