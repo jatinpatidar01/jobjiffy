@@ -33,7 +33,7 @@ export default function Home() {
     // Fetch bookings
     if(showAccepted){
       axios.get("https://jobjiffy-1.onrender.com/bookings/accepted-bookings",
-        
+        { params: { userId: localStorage.getItem("userId") }, }
       )
       .then((res) => {
         console.log("Fetched accepted bookings:", res.data);
