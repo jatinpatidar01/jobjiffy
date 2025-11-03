@@ -1,0 +1,136 @@
+/* app.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .dark-theme {
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #000000;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    margin-left: 50px;
+    font-weight: 800;
+    color: #fff;
+  }
+  
+  .logo span {
+    color: #ff4c00;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin-right: 50px;
+  }
+  
+  .nav-links li {
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li:hover {
+    color: #ff4c00;
+  }
+  
+  .login-btn {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .login-btn:hover {
+    background: #ff4c00;
+    color: #000;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(90deg, #1a0033, #ff4c00, #4c00ff);
+    color: #fff;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+    gap: 3rem;
+    border-bottom: 2px solid #ff4c00;
+  }
+  
+  .tab {
+    padding: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.3s;
+  }
+
+  .tab:hover,
+  .tab.active {
+    color: #ff4c00;
+    border-bottom: 3px solid #ff4c00;
+  }
+  .active{
+    text-decoration: none;
+    color: #fdfefe;
+  }
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .nav{
+    text-decoration: none;
+    color: white;
+  }
+  .service-card {
+    background: transparent;
+    border: 2px solid white;
+    padding: 2rem;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+    text-align: center;
+    color: #fdfefe;
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-shadow: 2px 2px #000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow:20px 20px #fdfefe;
+    border-style: groove;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #0015ff;
+  }
+  
+  .service-text {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #f9fcfc;
+    letter-spacing: 1px;
+  }
+  
+  

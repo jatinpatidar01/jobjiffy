@@ -1,0 +1,138 @@
+/* Full Page Gradient Background */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #ff7e5f, #feb47b);
+  background-size: 300% 300%;
+  animation: gradientFlow 10s ease infinite;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Gradient Animation */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Glassy Card Box */
+.login-form {
+  background: rgba(7, 7, 7, 0.15);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 40px 35px;
+  width: 360px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 0.8s ease-in;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title */
+.login-form h2 {
+  font-size: 1.9rem;
+  margin-bottom: 25px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Input Fields */
+.input-group {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: #f1f1f1;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: #ddd;
+}
+
+.input-group input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 11px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff, #ff4b2b, #ff416c);
+  background-size: 300% 100%;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.login-btn:hover {
+  background-position: right center;
+  transform: scale(1.03);
+}
+
+/* Register Link */
+.login-form a {
+  display: block;
+  margin-top: 14px;
+  color: #f9f9f9;
+  font-size: 0.93rem;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.login-form a:hover {
+  color: #ffe29f;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-form {
+    width: 90%;
+    padding: 28px 20px;
+  }
+
+  .login-form h2 {
+    font-size: 1.6rem;
+  }
+}
