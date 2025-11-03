@@ -3,7 +3,7 @@ import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaUserCircle } from "react-icons/fa";
 import { toast } from "react-toastify";
-import "./home.css";
+import "./Home.css";
 import About from "./About";
 import ContactUs from "./ContactUs";
 import Footer from "./Footer";
